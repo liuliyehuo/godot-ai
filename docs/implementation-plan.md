@@ -139,7 +139,7 @@ These are not the next things to do blindly. They are the extensions that matter
     - [ ] `animation_tree.*` — blend trees and state machines for layered locomotion and gameplay-driven transitions
     - [ ] Bezier tracks — advanced curve authoring beyond value/method tracks
     - [ ] animation tracks (the nested kind, animations that drive other animations) for composite playback
-    - [ ] importing animations from `.glb` / `.fbx` — belongs under future asset-pipeline tooling rather than the authoring surface, but tracked here so the seam is visible
+    - [ ] imported animations from `.glb` / `.fbx` — depends on the asset-pipeline family below, not the authoring surface
 - `audio.*`
   - [ ] audio tracks inside `AnimationPlayer` — one-shot SFX triggered from animation timelines, lives here rather than in the animation family
 
@@ -148,6 +148,10 @@ These are not the next things to do blindly. They are the extensions that matter
 - `material.*`, `shader.*`, `particles.*`
 - `physics.*` helpers for layers, masks, bodies, and common 2D setup
 - light `tilemap.*` and/or `navigation.*` if the benchmark moves from a single arena to authored rooms
+- `asset_pipeline.*` — import and reimport tooling for content that originates outside the editor
+  - [ ] `.glb` / `.fbx` import for meshes and skeletal animation — feeds the animation family's imported-clip follow-up above
+  - [ ] texture, audio, and font import-setting control so the AI can tune compression, filtering, and loop flags without opening the Import dock
+  - [ ] reimport triggers and import-preset management so bulk asset swaps don't require manual editor intervention
 
 ### Tier 3: Verification and Shipping Support
 
