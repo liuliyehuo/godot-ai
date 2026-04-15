@@ -134,6 +134,11 @@ These are not the next things to do blindly. They are the extensions that matter
   - [ ] critical path for reusable `button.tscn` / `enemy.tscn` instanced into many parent scenes — the piece that turns the UI composer and node_create flows into "real Godot project structure" instead of one-shot scene builds
 - `animation_player.*` / `animation_tree.*`
   - [ ] needed for UI juice (hover pulse, slide-in menus, fade transitions), combat readability (shake on damage, hit-stop), and general feel — the current stack can build static HUDs but cannot animate them
+  - **Out of scope for the first animation PR** (explicit non-goals, tracked separately):
+    - `AnimationTree` / blend trees / state machines — the first PR targets `AnimationPlayer` only
+    - Bezier tracks — stick to value and method tracks; advanced curve authoring is deferred
+    - Audio tracks and animation tracks (the nested kind) — audio belongs under the `audio.*` family and will ship there
+    - Importing animations from `.glb` / `.fbx` — asset-pipeline territory, not part of the authoring surface
 - `audio.*`
 
 ### Tier 2: Strong Polish Multipliers
